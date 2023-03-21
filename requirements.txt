@@ -1,0 +1,8 @@
+Flask
+pdf2image
+paddleocr
+paddlepaddle
+PyPDF2
+reportlab
+img2pdf
+numpy

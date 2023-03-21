@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF Processing Service</title>
+</head>
+<body>
+    <h1>PDF Processing Service</h1>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="flashes">
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    <form action="{{ url_for('process_pdf') }}" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <br>
+        <input type="submit" value="Process PDF">
+    </form>
+</body>
+</html>
