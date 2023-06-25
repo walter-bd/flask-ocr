@@ -16,7 +16,7 @@ from config import Config
 app = Flask(__name__)
 app.config.from_object(Config)
 # Initialize PaddleOCR with the desired language(s)
-ocr = PaddleOCR(lang="es", use_gpu=True)     
+ocr = PaddleOCR(lang="es", use_gpu=True, use_angle_cls=False, cls=False)     
 
 from PyPDF2 import PaperSize
 A4_w = PaperSize.A4.width
